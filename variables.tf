@@ -36,16 +36,10 @@ variable container_image {
     type = string
 }
 
-/*variable asfc_aspl_tier {
-  description = "Nivel de App Service Plan creado por el modulo ASPL."
-  type        = string
-}*/
-
 variable asfc_aspl_id {
   description = "ID del App Service Plan creado por el módulo ASPL."
   type        = map
 }
-
 
 locals {
   rsgr_code = "rsgr"
