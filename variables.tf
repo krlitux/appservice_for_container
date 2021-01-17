@@ -63,8 +63,8 @@ locals {
   map_asfc = {
     for region in var.location :
     local.map_locations_code[lower(region)] => {
-      asfc_name = format("%s%s%s%s%s", lower(local.asfc_code), lower(region), lower(var.application_code), lower(var.environment), var.resource_correlative),
-      asfc_rsgr = format("%s%s%s%s%s", upper(local.rsgr_code), upper(region), upper(var.application_code), upper(var.environment), var.base_correlative)
+      asfc_name = lower(format("%s%s%s%s%s", local.asfc_code, region, var.application_code, var.environment, var.resource_correlative)),
+      asfc_rsgr = upper(format("%s%s%s%s%s", local.rsgr_code, region, var.application_code, var.environment, var.base_correlative))
     }
   }
 
