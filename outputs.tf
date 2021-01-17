@@ -3,9 +3,14 @@ output "asfc_name" {
   value       = { for region in keys(azurerm_app_service.asfc) : region => azurerm_app_service.asfc[region].name }
 }
 
+output "asfc_hostname" {
+  description = "Nombre del recurso desplegado"
+  value       = { for region in keys(azurerm_app_service.asfc) : region => azurerm_app_service.asfc[region].default_site_hostname }
+}
+
 output "asfc_id" {
   description = "Mapa con los nombres de los App Service Plan aprovisionados"
-  value = { for region in keys(azurerm_app_service.asfc) : region => azurerm_app_service.asfc[region].id }
+  value       = { for region in keys(azurerm_app_service.asfc) : region => azurerm_app_service.asfc[region].id }
 }
 
 output "asfc_image" {
