@@ -21,11 +21,3 @@ resource "azurerm_app_service" "asfc" {
   }
 
 }
-
-/*resource "azurerm_app_service_custom_hostname_binding" "asfc" {
-  depends_on = [azurerm_app_service.asfc]
-  for_each            = local.map_asfc
-  hostname            = var.frontdoor_hostname
-  app_service_name    = each.value.asfc_name
-  resource_group_name = each.value.asfc_rsgr
-}*/

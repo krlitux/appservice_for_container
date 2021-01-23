@@ -41,11 +41,6 @@ variable asfc_aspl_id {
   type        = map
 }
 
-/*variable frontdoor_hostname {
-  description = "Especifica el nombre personalizado del app service."
-  type = string
-}*/
-
 locals {
   rsgr_code = "rsgr"
   asfc_code = "asfc"
